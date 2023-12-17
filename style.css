@@ -1,0 +1,710 @@
+::-webkit-scrollbar {
+  display: none;
+} /*hide scrollbar*/
+
+html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  overflow-x:hidden; /*disable horizontal scroll*/
+}
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+}
+
+.header-main-logo{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+
+.header-main {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 100px;
+  background-color: transparent;
+  z-index: 1000;
+  align-items: center;
+  transition: 0.3s; /* Add transition effect for smooth color change */
+  justify-content: space-between;
+}
+
+.header-main-logo{
+  height: 120px;
+  width: 120px;
+  display: flex;
+}
+
+.header-main-logo img{
+  margin-top: 50px;
+  margin-left: 50px;
+  align-self: center;
+}
+
+
+.header-main a{
+  color: white;
+  cursor: pointer;
+}
+
+.logo{
+  margin-top: 70px;
+  margin-left: 1px;
+  align-self: center;
+  width: 100px;  
+}
+
+.container{
+  padding: 10px 3%;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#sidemenu{
+  margin-left: 320px;
+}
+
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  margin: 5px 10px;
+  margin-top: 40px;
+  align-items: center;
+}
+
+nav ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  position: relative;
+}
+
+nav ul li a::after{
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #fbff00;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  display: block;
+  transition: 0.5s;
+
+}
+
+nav ul li a:hover::after{
+  width: 100%;
+}
+
+.header-navigation-main a:hover {
+  background-color: white;
+  color: black;
+}
+
+.header-main.sticky {
+  background-color: white;
+}
+
+.header-main.sticky .header-main-nav a {
+  color: black;
+}
+
+
+.logo img {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+}
+
+.hero p {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  color: white;
+  font-size: 20px;
+  z-index: 2; /* Place the text above the video */
+
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the opacity here (0.3 means 30% opacity) */
+  z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .header-navigation-main {
+    flex-direction: column;
+    align-items: stretch;
+    column-gap: 0;
+  }
+
+  .header-navigation-main a {
+    width: 100%; /* Make navigation items take full width */
+    text-align: left; /* Align text to the left */
+  }
+}
+
+.video-bg {
+  position:absolute;
+  object-fit: cover;
+  z-index: -1;
+  color: rgb(o,o,o, 0.50);
+}
+
+.text1{
+  height: 320px;
+  width: 100%;
+  background-color: #f8f0e5;
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  text-align: center;
+
+}
+
+.grandfather{
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 2; /*ung mga kailangang pindutin need z-index higher than this*/
+  scroll-snap-type: y mandatory;
+  /*border: 1px solid red;*/
+}
+.grandfather2 {
+  margin-top: 100px;
+  height: 100vh;
+  width: 50%;
+  position: relative;
+  z-index: 2; /*ung mga kailangang pindutin need z-index higher than this*/
+  scroll-snap-type: y mandatory;
+  border: 1px solid blue;
+}
+/*
+.grandfather > div {
+  border: 1px solid red;
+}
+*/
+.father{
+  height: 50%;
+  width: 1344px;
+  position: relative;
+  display: flex;
+  margin-top: 10%;
+  margin-left: 2.5%;
+}
+
+
+.father h1{
+  margin-top: 80px;
+  font-size: 30px;
+  text-align: justify;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  color: rgb(255, 182, 26);
+  font-stretch: ultra-expanded; 
+  text-shadow: 1px 1px black;
+}
+
+
+.father2{
+  height: 20%;
+  width: 45%;
+  position: relative;
+  display: flex;
+  margin-top: -7.5%;
+  margin-left: 1.75%;
+}
+
+.father2 p{
+  text-align: justify;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 1px 1px black;
+}
+
+.father3{
+  position: relative;
+  display: flex;
+  margin-top: 0%;
+  margin-left: 2.8%;
+  width: 30%;
+}
+
+.father3 a{
+  font-size: 20px;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 1px 1px black;
+  font-weight: bolder;
+}
+
+
+
+
+.fathercon{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  border: 1px solid blueviolet;
+  display: flex;
+  justify-content: center;
+}
+.grid-container {
+  display: grid;
+  grid-template-areas:
+  'menu menu header header'
+  'menu menu main main'
+  'menu menu main main'
+  'menu menu main main'
+  'menu menu main main'
+  'menu menu main main'
+  'menu menu main main'
+  'menu menu main main'
+  'menu menu main main'
+  'menu menu main main'
+  'menu menu main main';
+  grid-gap: 10px;
+  padding: 20px;
+  width: 145vh;
+  height: 80vh;
+  margin: auto;
+}
+
+.item1 { grid-area: header; 
+  height: 25vh;
+  color: rgb(255, 182, 26);
+}
+.item1 h1{
+  font-size: 50px;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  font-stretch: ultra-expanded; 
+  text-shadow: 1px 1px black;
+}
+.item2 { grid-area: menu; 
+  font-family: Arial, Helvetica, sans-serif;
+  width: 80vh;
+  display: grid;
+  grid-template-areas:
+  'q w w'
+  'q w w'
+  'e e r';
+  grid-gap: 10px;
+
+}
+.item3 { grid-area: main; 
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+.item3 p{
+  text-align: left;
+  font-size: 25px;
+}
+
+
+.grid-container > div {
+  text-align: center;
+  padding: 0 0 0 0;
+  font-size: 30px;
+}
+
+
+
+.pic1 { grid-area: q; }
+.pic2 { grid-area: w; }
+.pic3 { grid-area: e; }
+.pic4 { grid-area: r; }
+
+.item2 > div {
+  text-align: center;
+  border: 1px solid green;
+}
+
+/*----NEWS AND EVENTS-----*/
+.news_container{
+  overflow: initial;
+}
+
+.news_content{
+  padding: 0 1.5rem;
+}
+
+.news_img{
+  width: 265px;
+  border-radius: .5rem;
+  justify-self: center;
+}
+
+.news_title{
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.news_description{
+  margin-bottom: var(--mb-0-75);
+}
+/*--------------------ANNOUNCEMENTS-----------------------*/
+.announcements{
+  display: flex;
+}
+.announce_title{
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+
+/*-------------------------------ELECTIVES--------------------------*/
+.card-container{
+  padding-top: 80px;
+  background: azure;
+}
+
+.card-container h3{
+  text-align: center;
+  font-size: 40px;
+}
+
+.card-group{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 30px;
+  
+}
+
+.card{
+  position: relative;
+  background-color:rgb(225, 172, 102);
+  width: 300px;
+  margin: 30px;
+  border-radius: 30px;
+  border: 8px solid white;
+}
+
+.card-image{
+  background-color:bisque;
+  height: 220px;
+  margin-bottom: 30px;
+  background-size: cover;
+  border-radius: 20px 20px 0 0;
+  text-align: center;
+}
+
+.card-1{
+  background-image: url('/');
+}
+
+.card-2{
+  background-image: url('/');
+}
+
+.card-image .card-2 a{
+  padding: 10px 15px;
+  display: block;
+  text-align: center;
+  margin: 50px 50px;
+}
+
+.card h2{
+  font-size: 30px;
+  padding: 30px;
+  text-align: center;
+}
+
+.card p{
+  padding: 10px;
+  text-align: justify;
+}
+
+.card a{
+  background-color:darkslategray;
+  color: white;
+  padding: 10px 15px;
+  display: block;
+  text-align: center;
+  margin: 15px 50px;
+  text-decoration: none;
+  border: 3px solid rgb(28, 28, 28);
+  cursor: pointer;
+}
+
+.card:hover{
+  background-color:chocolate;
+  color: rgb(255, 139, 6);
+  
+  transform: scale(1.07);
+  transition: all 1s ease;
+}
+
+.card:hover + .hover-paragraph {
+  display: block;
+}
+
+
+/*-------------------------------ELECTIVES test 1--------------------------*/
+
+html,
+body {
+    height: 100%;
+    margin:0;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    background: #eee;
+    padding:0;
+    animation: fade-in 3s ease-in-out forwards;
+}
+
+strong {
+    font-weight: 900;
+}
+
+.canvas-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: beige;
+}
+
+.canvas + .canvas {
+    margin-left: 40px;
+}
+
+.canvas {
+    position: relative;
+    display: block;
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.canvas_border {
+    position: absolute;
+    top: 40px;
+    left: -40px;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+
+.canvas_border svg {
+    height: 100%;
+    width: 100%;
+}
+
+.rect-gradient {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: erase-line 1s ease-in-out forwards;
+}
+
+.canvas_img-wrapper {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: rotate(-10deg) skew(-10deg);
+    overflow: hidden;
+    background: white;
+}
+
+.canvas_img {
+    transform: scale3d(0.9, 0.9, 0.9);
+    opacity: 0.3;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.canvas_copy {
+    position: absolute;
+    bottom: 0;
+    left: 85%;
+    text-transform: uppercase;
+    color: #dac527;
+    z-index: 100;
+}
+
+.canvas_copy--left {
+    left: -25%;
+}
+
+.canvas_copy_title {
+    font-size: 40px;
+    display: block;
+    transform: translateX(-80px);
+    transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
+    color: black;
+}
+
+.canvas_copy_title:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.canvas_copy_title:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.canvas_copy_subtitle {
+    display: block;
+    transform: rotate(270deg) translateY(-100%) translateX(calc(-100% - 80px));
+    transform-origin: top left;
+    position: absolute;
+    left: 0;
+    top: 8px;
+    font-size: 24px;
+    font-weight: 900;
+    transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.35s;
+}
+
+.canvas_copy_details {
+  display: inline-block;
+  padding: 10px;
+  transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.14s;
+  transform: translateX(-80px);
+}
+
+
+.canvas_border,
+.canvas_img-wrapper,
+.canvas_img {
+    transition: all 0.25s ease-in-out;
+}
+
+.canvas_border,
+.canvas_img-wrapper {
+    transform: rotate(-10deg) skew(-10deg);
+}
+
+.canvas_copy_title,
+.canvas_copy_subtitle,
+.canvas_copy_details{
+    opacity: 0;
+}
+
+.canvas:hover {
+    .canvas_copy_title,
+    .canvas_copy_subtitle,
+    .canvas_copy_details,
+    .canvas_img {
+        opacity: 1;
+    }
+
+    .canvas_border,
+    .canvas_img-wrapper {
+        transform: rotate(-14deg) skew(-14deg) scale(0.96);
+    }
+
+    .canvas_img {
+        transform: scale3d(1, 1, 1);
+    }
+
+    .canvas_copy_title,
+    .canvas_copy_details {
+        transform: translateX(0);
+    }
+
+    .canvas_copy_subtitle {
+        transform: rotate(270deg) translateY(-100%) translateX(-100%);
+    }
+
+    .rect-gradient {
+        animation: draw-line 3s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    }
+}
+
+@keyframes draw-line {
+    from {
+        stroke-dashoffset: 2000;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes erase-line {
+    from {
+        stroke-dashoffset: 0;
+    }
+    to {
+        stroke-dashoffset: 2000;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+miss ko na siya hayst, kaso wala n
+---anong nangyari ba
+wala eh, di na nga ako na ehe wag na baka malaman mo. Baka kasi magshot ako, di pamandin ako marunong uminom
+*/
