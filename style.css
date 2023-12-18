@@ -2,10 +2,15 @@
   display: none;
 } /*hide scrollbar*/
 
-html, body {
+html{
+  scroll-behavior: smooth;
+  /*snap not work*/
+  scroll-snap-type: y mandatory;
+} 
+
+body {
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
   overflow-x:hidden; /*disable horizontal scroll*/
 }
 .hero {
@@ -26,8 +31,6 @@ html, body {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
-
 
 .header-main {
   position: fixed;
@@ -60,7 +63,7 @@ html, body {
 }
 
 .logo{
-  margin-top: 70px;
+  margin-top: 30px;
   margin-left: 1px;
   align-self: center;
   width: 100px;  
@@ -69,6 +72,7 @@ html, body {
 .container{
   padding: 10px 3%;
 }
+
 
 nav{
   display: flex;
@@ -200,31 +204,23 @@ nav ul li a:hover::after{
 
 }
 
+
+/*--------------------------------------ABOUT-------------------------------------------*/
 .grandfather{
   height: 100vh;
   width: 100%;
   position: relative;
   z-index: 2; /*ung mga kailangang pindutin need z-index higher than this*/
-  scroll-snap-type: y mandatory;
   /*border: 1px solid red;*/
-}
-.grandfather2 {
-  margin-top: 100px;
-  height: 100vh;
-  width: 50%;
+}.grandfather2{
+  height: 85%;
+  width: 100%;
   position: relative;
   z-index: 2; /*ung mga kailangang pindutin need z-index higher than this*/
-  scroll-snap-type: y mandatory;
-  border: 1px solid blue;
+  /*border: 1px solid red;*/
 }
-/*
-.grandfather > div {
-  border: 1px solid red;
-}
-*/
+
 .father{
-  height: 50%;
-  width: 1344px;
   position: relative;
   display: flex;
   margin-top: 10%;
@@ -233,9 +229,8 @@ nav ul li a:hover::after{
 
 
 .father h1{
-  margin-top: 80px;
-  font-size: 30px;
-  text-align: justify;
+  font-size: 80px;
+  text-align: left;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bolder;
   color: rgb(255, 182, 26);
@@ -245,18 +240,16 @@ nav ul li a:hover::after{
 
 
 .father2{
-  height: 20%;
+  margin-left: 1.75%;
+  height: 10%;
   width: 45%;
   position: relative;
   display: flex;
-  margin-top: -7.5%;
-  margin-left: 1.75%;
 }
 
 .father2 p{
   text-align: justify;
   font-family: Arial, Helvetica, sans-serif;
-  text-shadow: 1px 1px black;
 }
 
 .father3{
@@ -282,7 +275,6 @@ nav ul li a:hover::after{
   height: 100%;
   width: 100%;
   position: relative;
-  border: 1px solid blueviolet;
   display: flex;
   justify-content: center;
 }
@@ -346,8 +338,6 @@ nav ul li a:hover::after{
   font-size: 30px;
 }
 
-
-
 .pic1 { grid-area: q; }
 .pic2 { grid-area: w; }
 .pic3 { grid-area: e; }
@@ -382,16 +372,75 @@ nav ul li a:hover::after{
   margin-bottom: var(--mb-0-75);
 }
 /*--------------------ANNOUNCEMENTS-----------------------*/
+
+.overlay-text{
+  margin-top: 10%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(206, 204, 204);
+}
 .announcements{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
   display: flex;
+  align-self: center;
+  justify-content:space-around;
+  margin-top: 10%;
+  margin-bottom: 5%;
 }
-.announce_title{
-  font-family: 'Courier New', Courier, monospace;
+.announce-cont{
+  position: relative;
+  margin: 10px;
+  border: 2px solid #c5cae9; 
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); 
+  border-radius: 2%;
+  width: fit-content;
+  height: fit-content;
+  padding: 0px;
+  transition: 0.5s ease;
+}
+.announce-cont:hover {
+  padding: 10px;
+  transition: 0.5s ease;
+  box-shadow:15px 10px #888888;
+  margin: 0px 100px;
+}
+.announce-img {
+  display: block;
+  width: 100%; /* Make the image responsive */
+  height: auto;
+  padding: 0px;
+  transition: 0.5s ease;
+  filter: blur(0);
+}
+.announce-cont:hover .announce-img {
+  filter: blur(5px);
+}
+.a-overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
+  transition: cubic-bezier(1, 0, 0, 1);
+  border: 2px solid #fff;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
 }
 
-
-
-
+.announce-cont:hover .a-overlay {
+  bottom: 0;
+  height: 130%;
+  }
+.announce-cont:hover .overlay-text {
+  color: #eb0f0f; 
+  }
+.announce-cont:hover .announce-img {
+  filter: blur(5px);
+}
 /*-------------------------------ELECTIVES--------------------------*/
 .card-container{
   padding-top: 80px;
@@ -500,6 +549,7 @@ strong {
 }
 
 .canvas-wrapper {
+    /*border: 1px solid violet; remove dis shet*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -508,7 +558,7 @@ strong {
 }
 
 .canvas + .canvas {
-    margin-left: 40px;
+    margin-left: 40px;  
 }
 
 .canvas {
@@ -576,7 +626,7 @@ strong {
 }
 
 .canvas_copy_title {
-    font-size: 40px;
+    font-size: 35px;
     display: block;
     transform: translateX(-80px);
     transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
@@ -686,15 +736,65 @@ strong {
     }
 }
 
+.downer {
+  /*border: 1px solid pink; remove dis shet*/
+  height: 15%;
+  width: 100%;
+  position: relative;
+  background: beige;
+}
+.title_electives {
+  /*border: 1px solid red; remove dis shet*/
+  height: 15%;
+  width: 100%;
+  position: absolute;
+  display: flex ;
+  justify-content: center;
+}
+.title_electives h1{
+  font-size: 30px;
+  text-align: center;
+  background: beige;
+  /*border: 1px solid brown; remove dis shet*/
+  display: flex ;
+  justify-content: center;
+  margin: auto;
+}
+
+/*-------------------------------VISION MISSION--------------------------*/
+.vision_mission{
+
+}
 
 
 
+.downer2 {
+  /*border: 1px solid pink; remove dis shet*/
+  height: 15%;
+  width: 100%;
+  position: relative;
+  border: 1px solid green;
+}
+
+.upcomingevents {
+  height: 20%;
+  width: auto;
+  border: 1px solid black;
+}
+
+.upcomingevents p {
+  font-size: 30;
+  text-shadow: 5 5 blue;
+  border: 1px solid red;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 
-
-
-
-
+/*
+.hero, .grandfather, .grandfather2, .news_event, .announcements, .vision_mission {
+  scroll-snap-align: center; 
+}
+/*need dis sa outermost div ng bawat section, kundi hindi sya maiiscrollan*/
 
 
 
@@ -707,4 +807,7 @@ strong {
 miss ko na siya hayst, kaso wala n
 ---anong nangyari ba
 wala eh, di na nga ako na ehe wag na baka malaman mo. Baka kasi magshot ako, di pamandin ako marunong uminom
+*/
+/*
+eew
 */
